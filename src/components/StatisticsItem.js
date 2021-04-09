@@ -8,7 +8,7 @@ function StatisticsItem({name, data, measurement}) {
             <p>{name}</p>
             <p>{data}</p>
             <p>{measurement}</p>
-            <img src={`/assets/img/${name}.png`} alt="asdas" />
+            <img src={`./assets/img/${name}.png`} alt="asdas" />
       </div>
     )
 }
