@@ -19,7 +19,7 @@ function App() {
               </div>
 
   const [pokemonInfo, setPokemonInfo] = useState(null);
-  let pokeballComponent = <img ref={pokeball}  src={Loader} alt="loading" />;
+  let pokeballComponent = <img ref={pokeball} style={{margin: 'auto auto'}}  src={Loader} alt="loading" />;
 
   const [currentWrapperClass, setCurrentWrapperClass] = useState('');
 
