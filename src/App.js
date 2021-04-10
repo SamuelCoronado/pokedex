@@ -12,7 +12,7 @@ function App() {
   const [pokemonInfo, setPokemonInfo] = useState(null)
 
   return (
-    <div className={`wrapper ${pokemonInfo !=null && 'show-pokemon'}`}>
+    <div className="wrapper">
         <nav>
         </nav>
         <div className="flex column main-wrapper">

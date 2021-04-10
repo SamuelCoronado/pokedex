@@ -336,8 +336,8 @@ nav {
         --section-title-font-size: 2.8rem;
     }
 
-    body {
-        height: max-content;
+    .wrapper {
+        height: unset;
     }
 
     nav {
