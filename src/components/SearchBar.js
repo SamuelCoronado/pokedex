@@ -6,11 +6,18 @@ function SearchBar({setPokemonInfo, pokemonInfo}) {
     const [search, setSearch] = useState('');
 
     const searchTest = (e) => {
-        setSearch(e.target.value);
+        setSearch((e.target.value));
     }
 
     const getPokemonInfo = (pokemonName) => {
-       axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+
+        pokemonName = pokemonName.trim().toLowerCase();
+        console.log(pokemonName);
+
+        setPokemonInfo('searching');
+
+        setTimeout(() => {
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
        .then(res => {
           setPokemonInfo({
               name: res.data.name,
@@ -32,7 +39,16 @@ function SearchBar({setPokemonInfo, pokemonInfo}) {
               ],
               abilities: res.data.abilities
           });
-       });
+       })
+       .catch(error => {
+           setPokemonInfo('not found');
+           setTimeout(() => {
+               setPokemonInfo(null);
+           }, 1000);
+       })
+        }, 3000);
+
+       
     }
 
     return (

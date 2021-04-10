@@ -70,9 +70,24 @@ section {
 
 
 nav {
-    padding: 5rem 1rem;
+    padding: 3.5rem 1rem;
     background-color: var(--menu-color);
     width: 5%;
+    position: relative;
+}
+
+.alert {
+    position: absolute;
+    top: -160%;
+    left: 0;
+    margin: 0 1rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(102,102,102,1) 100%);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    z-index: 2;
+    transition: 0.25s linear;
 }
 
 .wrapper {
@@ -336,12 +351,12 @@ nav {
         --section-title-font-size: 2.8rem;
     }
 
-    .wrapper {
-        height: unset;
-    }
-
     nav {
         height:auto;
+    }
+
+    .wrapper-auto {
+        height: unset;
     }
 
     .grid {
@@ -367,6 +382,10 @@ nav {
     .wrapper {
         flex-direction: column;
         width: auto;
+    }
+
+    .wrapper-auto {
+        height: unset;
     }
 
     nav {
@@ -409,6 +428,10 @@ nav {
         width: auto;
     }
 
+    .wrapper-auto {
+        height: unset;
+    }
+
     .main-wrapper {
         padding: 0.5rem 1.5rem;
     }
@@ -430,7 +453,6 @@ nav {
         grid-template-columns: 1fr;
         grid-template-rows: unset;
         gap: 3rem;
-        width: auto;
         max-height: 100%;
     }
 
